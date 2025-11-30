@@ -10,7 +10,9 @@ function App() {
   return (
    <>
     <h1 className='header'>Simply CV</h1>
-    <CvForm />
+    <CvForm fieldList={[{id: 'general', name: 'Name', type:"text" },
+                        {id: 'general', name: 'Email', type:"Email" },
+                        {id: 'general', name: 'Phone number', type:"tel" },]}/>
     <ButtonEl name={'edit'} className='cvBtn'/>
     <ButtonEl name={'submit'} className='cvBtn'/>
    </>
