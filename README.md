@@ -3,14 +3,14 @@ this is the first react project in the Odin project curriculum !
 
 ## project requirments:
 This project main focuse and goal is the utilization and familiarization of react specific technologies and concepts including:
-    - vite (react project constructur/ bundeling)
-    - JSX
-    - react dev tools
-    - modular designe
-    - component based approach
-    - state handelling
-    - component props
-    - good state structuring 
+- vite (react project constructur/ bundeling)
+- JSX
+- react dev tools
+- modular designe
+- component based approach
+- state handelling
+- component props
+- good state structuring 
 
 ### user  input:
 - general information section:
