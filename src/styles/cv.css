@@ -2,22 +2,28 @@
     border: 2px solid rgb(0, 132, 255);
     border-radius: 20px;
     padding: 20px;
-    height: max-content;
-    
+
 }
-ul{
+.my-name{
+    height: min-content;
+}
+.top-ul{
   list-style: none;
   justify-items: start;
+  align-self: start;
   background-color: rgb(153, 153, 153);
   padding-left: 5px;
   color: white;
+
 }
-.experience-container{
-    justify-self: start;
-    justify-items: start;
+h3{
+   justify-self: start;
     padding-left: 5px;
 }
-.education-container{
-    justify-self: start;
-    padding-left: 5px;
+
+.experience-info{
+   justify-self: start; 
+}
+.education-info{
+    justify-self: start; 
 }

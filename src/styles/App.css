@@ -36,16 +36,27 @@ h1 {
   "forms preview"
 
  ;
-
 }
 .Cv-preview{
-  display: absolute;
+ 
   grid-area: preview;
   justify-items: start;
+  
 }
 .form-container{
 
   grid-area: forms;
-    
 
+}
+@media(max-width: 750px){
+  .main-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "title"
+    "preview"
+    "forms"
+  
+  ;
+  }
 }

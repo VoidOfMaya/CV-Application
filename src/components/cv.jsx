@@ -6,23 +6,25 @@ import '../styles/cv.css';
 function Cv({personal, experience, education}){
     return(
         <div className="cv-div">
-            <h2>{personal.name}</h2>
+            <h2 className="my-name">{personal.name}</h2>
             <h3>Personal info:</h3>
-            <ul>
+            <ul className="top-ul">
                 <li> <b>protfolio:</b> {personal.portfolio}</li>
                 <li><b>Git:</b> {personal.git}</li>
                 <li><b>Email:</b> {personal.email}</li>
                 <li><b>Phone number:</b> {personal.phone}</li>
             </ul>
-            <br></br>
-            <h3 className="experience-container">Experience:</h3>
-                <div><b>worked at</b> {experience.company} - {experience.position} - <b>from</b> {experience.startDate} <b>to</b> {experience.endDate}</div>
+            
+            <h3 >Experience:</h3>
+                <div className="experience-info">
+                <b>worked at</b> {experience.company} - {experience.position} - <b>from</b> {experience.startDate} <b>to</b> {experience.endDate}</div>
                 <p>{experience.responsibilities}</p>
-            <br></br>
-            <h3 className="education-container">Education:</h3>
-            <ul>
-                <li> <b>studied with</b> {education.school} - {education.subject} <b>from</b>{education.startDate} <b>to</b> {education.endDate}</li>
-            </ul>
+            
+            <h3 >Education:</h3>
+            <div className="education-info"> 
+                <b>studied with</b> {education.school} - {education.subject} <b>from</b>{education.startDate} <b>to</b> {education.endDate}
+            </div>
+            
 
         </div>
     )
