@@ -30,8 +30,22 @@ h1 {
 .main-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto ;
+  grid-template-rows: auto auto;
   grid-template-areas:
-  "title title";
+  "title title"
+  "forms preview"
+
+ ;
+
+}
+.Cv-preview{
+  display: absolute;
+  grid-area: preview;
+  justify-items: start;
+}
+.form-container{
+
+  grid-area: forms;
+    
 
 }

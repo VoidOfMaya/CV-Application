@@ -1,6 +1,5 @@
-import { Fragment, useState } from 'react';
+import { Fragment} from 'react';
 import { handlePlaceHolder } from '../modules/placeholder';
-import {ButtonEl} from '../components/button.jsx';
 import '../styles/forms.css';
 
 //takes a list of fields to create with type eg: [{id, name, type},{id, name, type},{id, name, type}]
@@ -22,10 +21,12 @@ function CvForm({fieldList, section, data, onChange}){
         
         title(section);
         const filedKey =section+ '-'+ field.name
-        const typeExample = handlePlaceHolder(field.type)
         return(
             <Fragment key={filedKey}>
-                <label  htmlFor={field.name}>{field.name}</label>
+                <label  className='lab-field' htmlFor={field.name}>
+                    <b>{field.name}</b>
+                </label>
+
                 <input  className='input-field' 
                         id={field.name} 
                         name={field.name} 
@@ -38,15 +39,17 @@ function CvForm({fieldList, section, data, onChange}){
         )
     })
     return(
-        <>
         
-        <form className="cv-form ">
-            <h2 className='title'>{name}</h2>    
-            {constructForm}
-            <ButtonEl name={'Edit'} className='cvBtn'/>
-            <ButtonEl name={'Submit'} className='cvBtn'/>
-        </form>
+        
+        <>    
+            <form className="cv-form " >
+                
+                <h2 className='title'>add {name}</h2> 
+                {constructForm}
+                    
+            </form>
         </>
+        
     )
 }
 

@@ -6,8 +6,6 @@ function handlePlaceHolder(type){
     case "email":
       return "example@email.com";
 
-
-
     case "phone":
       return "123-456-7890";
 
@@ -22,21 +20,6 @@ function handlePlaceHolder(type){
 
     case "git":
       return "www.github.com/ExampleUser";
-
-    case "color":
-      return "#ffffff";
-
-    case "time":
-      return "HH:MM";
-
-    case "datetime-local":
-      return "YYYY-MM-DDTHH:MM";
-
-    case "month":
-      return "YYYY-MM";
-
-    case "week":
-      return "YYYY-W##";
 
     default:
       return "Enter value";

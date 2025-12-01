@@ -9,17 +9,19 @@ function Cv({personal, experience, education}){
             <h2>{personal.name}</h2>
             <h3>Personal info:</h3>
             <ul>
-                <li> protfolio: {personal.portfolio} . Git: {personal.git}</li>
-                <li>Email: {personal.email}</li>
-                <li>Phone number: {personal.phone}</li>
+                <li> <b>protfolio:</b> {personal.portfolio}</li>
+                <li><b>Git:</b> {personal.git}</li>
+                <li><b>Email:</b> {personal.email}</li>
+                <li><b>Phone number:</b> {personal.phone}</li>
             </ul>
             <br></br>
-            <h3>Experience:</h3>
-                <div>worked at {experience.company} - {experience.position} - from {experience.startDate} to {experience.endDate}</div>
+            <h3 className="experience-container">Experience:</h3>
+                <div><b>worked at</b> {experience.company} - {experience.position} - <b>from</b> {experience.startDate} <b>to</b> {experience.endDate}</div>
+                <p>{experience.responsibilities}</p>
             <br></br>
-            <h3>Education:</h3>
+            <h3 className="education-container">Education:</h3>
             <ul>
-                <li> studied with {education.school} - {education.title} from{education.startDate} to {education.endDate}</li>
+                <li> <b>studied with</b> {education.school} - {education.subject} <b>from</b>{education.startDate} <b>to</b> {education.endDate}</li>
             </ul>
 
         </div>
