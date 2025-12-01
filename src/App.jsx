@@ -5,11 +5,7 @@ import { Cv } from './components/cv.jsx';
 import { data } from './modules/cvData.js';
 
 function App() {
-  const [cvData, setCvData] = useState({personal:{},
-                                        experience:{},
-                                        education:{}});
-  
-
+  const [cvData, setCvData] = useState({personal:{},experience:{},education:{}});
   //Cv takes personal info{name, email, number , portfolio, git},
   //     education   {school, title, startDate, endDte}
   //     experience   {copmany, position, startDate, endDte, responsibilities}

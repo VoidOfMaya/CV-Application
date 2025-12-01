@@ -49,6 +49,9 @@ h1 {
 
 }
 @media(max-width: 750px){
+  body{
+    margin: 0px;
+  }
   .main-container{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -58,5 +61,10 @@ h1 {
     "forms"
   
   ;
+  margin-left: 0px;
+  padding: 0px;
+  }
+  #root{
+    padding: 0px;
   }
 }
