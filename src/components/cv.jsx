@@ -9,9 +9,9 @@ function Cv({personal, experience, education}){
             <h2>{personal.name}</h2>
             <h3>Personal info:</h3>
             <ul>
-                <li> protfolio: {personal.portfolio} .Git: {personal.github}</li>
+                <li> protfolio: {personal.portfolio} . Git: {personal.git}</li>
                 <li>Email: {personal.email}</li>
-                <li>Phone number:{personal.number}</li>
+                <li>Phone number: {personal.phone}</li>
             </ul>
             <br></br>
             <h3>Experience:</h3>

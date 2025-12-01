@@ -1,17 +1,17 @@
 function handlePlaceHolder(type){
   switch (type) {
-    case "Name":
+    case "name":
       return "Full name goes here";
 
-    case "Email":
+    case "email":
       return "example@email.com";
 
 
 
-    case "Phone number":
+    case "phone":
       return "123-456-7890";
 
-    case "Portfolio":
+    case "portfolio":
       return "www.MyPortfolioExample.com/";
 
     case "date":
@@ -20,7 +20,7 @@ function handlePlaceHolder(type){
     case "url":
       return "https://example.com";
 
-    case "Git":
+    case "git":
       return "www.github.com/ExampleUser";
 
     case "color":

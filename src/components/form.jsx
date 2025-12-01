@@ -4,8 +4,12 @@ import {ButtonEl} from '../components/button.jsx';
 import '../styles/forms.css';
 
 //takes a list of fields to create with type eg: [{id, name, type},{id, name, type},{id, name, type}]
-function CvForm({fieldList}){
-    const[info, setinfo] = useState('');
+function CvForm({fieldList, section, data, onChange}){
+ function handleChange(e){
+    const {name, value} = e.target;
+    const updateSection = {...data, [name]:value};
+    onChange(updateSection);
+ }
     let hastitle = false;
     let name;
     
@@ -16,22 +20,20 @@ function CvForm({fieldList}){
     //cunstructs form
     const constructForm = fieldList.map(field=>{
         
-        title(field.id);
-        const filedKey =field.id+ '-'+ field.name
+        title(section);
+        const filedKey =section+ '-'+ field.name
         const typeExample = handlePlaceHolder(field.type)
         return(
             <Fragment key={filedKey}>
-            <label  for={field.name}>{field.name}</label>
-            <input  className='input-field' 
-                    id={field.name} 
-                    name={field.name} 
-                    type={field.type} 
-                    placeholder={handlePlaceHolder(field.name)}
-                    value={info}
-                    onChange={(e)=>{
-                        setinfo(e.target.value)
-                    }}
-                    />
+                <label  htmlFor={field.name}>{field.name}</label>
+                <input  className='input-field' 
+                        id={field.name} 
+                        name={field.name} 
+                        type={field.type} 
+                        placeholder={handlePlaceHolder(field.name)}
+                        value={data[field.name] || ""}
+                        onChange={handleChange}
+                        />
             </Fragment>
         )
     })
@@ -41,9 +43,8 @@ function CvForm({fieldList}){
         <form className="cv-form ">
             <h2 className='title'>{name}</h2>    
             {constructForm}
-            <ButtonEl name={'edit'} className='cvBtn'/>
-            <ButtonEl name={'submit'} className='cvBtn'/>
-            <p>{info}</p>
+            <ButtonEl name={'Edit'} className='cvBtn'/>
+            <ButtonEl name={'Submit'} className='cvBtn'/>
         </form>
         </>
     )
